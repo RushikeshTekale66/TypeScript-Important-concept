@@ -1,13 +1,5 @@
-var num : number = 100;
-console.log(num);
+function EvenOdd(a:number): boolean{
+    return a%2===0;
+}
 
-var str : string = "Rushikesh"; 
-console.log(str);
-
-var bool : boolean = true;
-console.log(bool);
-
-
-
-
-
+console.log(EvenOdd(11));

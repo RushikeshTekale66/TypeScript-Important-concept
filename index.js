@@ -1,7 +1,5 @@
 "use strict";
-var num = 100;
-console.log(num);
-var str = "Rushikesh";
-console.log(str);
-var bool = true;
-console.log(bool);
+function EvenOdd(a) {
+    return a % 2 === 0;
+}
+console.log(EvenOdd(11));
