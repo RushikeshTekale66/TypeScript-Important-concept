@@ -1,5 +1,12 @@
-function EvenOdd(a:number): boolean{
-    return a%2===0;
-}
+let one : unknown = 10;
+one = "Rushi";
+one = true;
 
-console.log(EvenOdd(11));
+console.log(one);
+
+let two : any = 10;
+two = true;
+two = "Rushi";
+
+
+console.log(two);
