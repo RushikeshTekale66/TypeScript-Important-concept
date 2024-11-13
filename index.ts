@@ -1,6 +1,13 @@
-//@ts-ignore
-function sum(a : number, b : number) : number{
-    return a+b;
-}
+var num : number = 100;
+console.log(num);
 
-console.log(sum(10, 20));
+var str : string = "Rushikesh"; 
+console.log(str);
+
+var bool : boolean = true;
+console.log(bool);
+
+
+
+
+
