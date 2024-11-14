@@ -1,22 +1,17 @@
-let numbers : number[] = [1, 2, 3, 4, 5, 5];
+let numbers: number[] = [1, 2, 3, 4, 5, 5];
+
+//Map method
+let doubleValue : number[] = numbers.map((value: number) => value*2)
+console.log(doubleValue);
 
 
-//for loop
-for(var i=0; i<numbers.length; i++){
-    console.log(numbers[i]);
-    
-}
+//Filter method
+let evenNumber: number[] = numbers.filter((value)=>value%2==0);
+console.log(evenNumber);
 
-//for of 
-for(let num of numbers){
-    console.log(num);
-    
-}
-
-//for each
-numbers.forEach((num : number)=>console.log(num))
-
-
+//Reduce method
+let sum : number = numbers.reduce((sum, value)=>sum+=value);
+console.log(sum);
 
 
 
