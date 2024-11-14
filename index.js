@@ -1,23 +1,10 @@
 "use strict";
-//Optional parameter denoted by "?"
-let greet = (name, id) => {
-    if (id) {
-        return `My name is ${name} & id is ${id}`;
-    }
-    else {
-        return `My name is ${name}`;
-    }
-};
-console.log(greet("Rushikesh"));
-console.log(greet("Rushikesh", 44));
-//Default parameter denoted by "="
-let greet2 = (name, id = 10) => {
-    if (id) {
-        return `My name is ${name} & id is ${id}`;
-    }
-    else {
-        return `My name is ${name}`;
-    }
-};
-console.log(greet2("Rushikesh"));
-console.log(greet2("Rushikesh", 44));
+//Array declaration using Square Bracket
+let numbers = [1, 2, 3, 4, 5, 5];
+console.log(numbers);
+//Array declaration using Array Constructor
+let numbers2 = new Array(1, 2, 3, 4, 5, 6);
+console.log(numbers2);
+//Array declaration using Array.of method
+let names = Array.of("Rushi", "Rohan");
+console.log(names);
