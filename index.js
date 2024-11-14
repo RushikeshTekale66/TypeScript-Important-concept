@@ -1,8 +1,12 @@
-var numbers = [1, 2, 3, 4, 5, 5];
-console.log(numbers);
-//Add element to an array
-numbers.push(100);
-console.log(numbers);
-//Remove element to an array
-numbers.pop();
-console.log(numbers);
+"use strict";
+let numbers = [1, 2, 3, 4, 5, 5];
+//for loop
+for (var i = 0; i < numbers.length; i++) {
+    console.log(numbers[i]);
+}
+//for of 
+for (let num of numbers) {
+    console.log(num);
+}
+//for each
+numbers.forEach((num) => console.log(num));
