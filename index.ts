@@ -1,12 +1,24 @@
-let one : unknown = 10;
-one = "Rushi";
-one = true;
 
-console.log(one);
+//Simple function
+function simple(name: string, id : number){
+    console.log(`My name is ${name} & id is ${id}`);
+    
+}
 
-let two : any = 10;
-two = true;
-two = "Rushi";
+simple("Rushi", 1);
 
 
-console.log(two);
+//Arrow function
+const arrow = (name : string, id : number)=>{
+    console.log(`My name is ${name} & id is ${id}`); 
+}
+
+arrow("Rohan", 2);
+
+//Arrow function with return type
+const arrow2 = (name : string, id : number):string=>{
+    return `My name is ${name} & id is ${id}`;
+}
+
+let ans = arrow2("Tushar", 3);
+console.log(ans);
