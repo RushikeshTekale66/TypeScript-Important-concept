@@ -1,20 +1,19 @@
-type Person = {
-    name : string,
+type User = {
+    name :string,
     age : number
 }
 
-type Employee = {
-    emp_id : number,
-    department : string 
+type MyLocation = {
+    city : string,
+    country : string
 }
 
-type EmployDetails = Person & Employee;
+const user : User = {name : "Rushikesh", age : 23};
+const myLocation : MyLocation = {city : "Pune", country : "India"};
 
-const employee : EmployDetails = {
-    name : "Rushikesh",
-    age : 123,
-    emp_id : 1,
-    department:"Computer"
+const createUserProfile : (user : User, myLocation : MyLocation) =>void = (user : User, myLocation : MyLocation) : void =>{
+    console.log( `Name is ${user.name} & age is ${user.age}`);
+    
 }
 
-console.log(employee);
+createUserProfile (user, myLocation);

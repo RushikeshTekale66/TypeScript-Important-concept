@@ -1,8 +1,7 @@
 "use strict";
-const employee = {
-    name: "Rushikesh",
-    age: 123,
-    emp_id: 1,
-    department: "Computer"
+const user = { name: "Rushikesh", age: 23 };
+const myLocation = { city: "Pune", country: "India" };
+const createUserProfile = (user, myLocation) => {
+    console.log(`Name is ${user.name} & age is ${user.age}`);
 };
-console.log(employee);
+createUserProfile(user, myLocation);
