@@ -1,17 +1,11 @@
 "use strict";
-var num;
-(function (num) {
-    num[num["one"] = 1] = "one";
-    num[num["two"] = 2] = "two";
-    num[num["three"] = 3] = "three";
-})(num || (num = {}));
-console.log(num.one);
-console.log(num.two);
-console.log(num.three);
-var str;
-(function (str) {
-    str["north"] = "North";
-    str["south"] = "South";
-})(str || (str = {}));
-console.log(str.north);
-console.log(str.south);
+const person1 = ["Rushi", 23, true];
+console.log(person1);
+//Touple
+const displayInfo = (person) => {
+    const [name, roll, hasId] = person;
+    console.log(`Name : ${name}, roll no is ${roll} & hasId card ${hasId ? "Yes" : "No"}`);
+};
+const person = ["Rohan", 21, false];
+displayInfo(person);
+displayInfo(person1);
