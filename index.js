@@ -1,11 +1,7 @@
 "use strict";
-const person1 = ["Rushi", 23, true];
-console.log(person1);
-//Touple
-const displayInfo = (person) => {
-    const [name, roll, hasId] = person;
-    console.log(`Name : ${name}, roll no is ${roll} & hasId card ${hasId ? "Yes" : "No"}`);
+const inputValue = (value) => {
+    console.log(value);
 };
-const person = ["Rohan", 21, false];
-displayInfo(person);
-displayInfo(person1);
+inputValue("Rushi");
+inputValue(123);
+inputValue(true);
