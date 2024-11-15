@@ -1,5 +1,5 @@
 "use strict";
-const person = {
+const person1 = {
     name: "Rushikesh",
     age: 23,
     address: {
@@ -7,4 +7,13 @@ const person = {
         country: "India"
     }
 };
-console.log(person);
+console.log(person1);
+const person2 = {
+    name: "Rohan",
+    age: 21,
+    address: {
+        city: "Dharashiv",
+        country: "India"
+    }
+};
+console.log(person2);
