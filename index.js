@@ -1,7 +1,8 @@
 "use strict";
-const inputValue = (value) => {
-    console.log(value);
+const employee = {
+    name: "Rushikesh",
+    age: 123,
+    emp_id: 1,
+    department: "Computer"
 };
-inputValue("Rushi");
-inputValue(123);
-inputValue(true);
+console.log(employee);
