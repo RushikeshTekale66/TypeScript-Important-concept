@@ -1,22 +1,18 @@
-type Student = {
-    name: string,
-    age: number,
-    gender?: string,
-    greet: (country: string) => string //methd call signature
+enum num{
+    one = 1,
+    two,
+    three
 }
 
+console.log(num.one);
+console.log(num.two);
+console.log(num.three);
 
-const student: Student = {
-    name: "Rushikesh",
-    age: 23,
-    greet: (country): string => `Welcome ${student.name} & age is ${student.age} I am from ${country}`
+enum str{
+    north="North",
+    south="South"
 }
 
-const student2: Student = {
-    name: "Tekale",
-    age: 21,
-    greet: (country): string => `Welcome ${student2.name} & age is ${student2.age} I am from ${country}`
-}
+console.log(str.north);
+console.log(str.south);
 
-console.log(student.greet("India"));
-console.log(student2.greet('India'));

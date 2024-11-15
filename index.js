@@ -1,13 +1,17 @@
 "use strict";
-const student = {
-    name: "Rushikesh",
-    age: 23,
-    greet: (country) => `Welcome ${student.name} & age is ${student.age} I am from ${country}`
-};
-const student2 = {
-    name: "Tekale",
-    age: 21,
-    greet: (country) => `Welcome ${student2.name} & age is ${student2.age} I am from ${country}`
-};
-console.log(student.greet("India"));
-console.log(student2.greet('India'));
+var num;
+(function (num) {
+    num[num["one"] = 1] = "one";
+    num[num["two"] = 2] = "two";
+    num[num["three"] = 3] = "three";
+})(num || (num = {}));
+console.log(num.one);
+console.log(num.two);
+console.log(num.three);
+var str;
+(function (str) {
+    str["north"] = "North";
+    str["south"] = "South";
+})(str || (str = {}));
+console.log(str.north);
+console.log(str.south);
