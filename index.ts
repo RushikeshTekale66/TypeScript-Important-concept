@@ -1,33 +1,22 @@
-//Write once & use it for multiple objet to define property
-type Person = {
-    name : string,
-    age : number,
-    address : {
-        city : string, 
-        country : string
-    }
+type Student = {
+    name: string,
+    age: number,
+    gender?: string,
+    greet: (country: string) => string //methd call signature
 }
 
-const person1 : Person= {
-    name : "Rushikesh",
-    age : 23,
-    address : {
-        city : "Pune",
-        country : "India"
-    }
+
+const student: Student = {
+    name: "Rushikesh",
+    age: 23,
+    greet: (country): string => `Welcome ${student.name} & age is ${student.age} I am from ${country}`
 }
 
-console.log(person1);
-
-const person2 : Person = {
-    name : "Rohan",
-    age : 21,
-    address:{
-        city:"Dharashiv",
-        country:"India"
-    }
+const student2: Student = {
+    name: "Tekale",
+    age: 21,
+    greet: (country): string => `Welcome ${student2.name} & age is ${student2.age} I am from ${country}`
 }
 
-console.log(person2);
-
-
+console.log(student.greet("India"));
+console.log(student2.greet('India'));
