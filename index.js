@@ -1,7 +1,11 @@
 "use strict";
-const user = { name: "Rushikesh", age: 23 };
-const myLocation = { city: "Pune", country: "India" };
-const createUserProfile = (user, myLocation) => {
-    console.log(`Name is ${user.name} & age is ${user.age}`);
-};
-createUserProfile(user, myLocation);
+//Generics in TS
+function longAndReturn(value) {
+    return value;
+}
+const numberResult = longAndReturn(44);
+console.log(numberResult);
+const stringResult = longAndReturn("Rushikesh");
+console.log(stringResult);
+const boolResult = longAndReturn(true);
+console.log(boolResult);
