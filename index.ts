@@ -1,18 +1,14 @@
 
 
 //Generics in TS
-function longAndReturn<T>(value : T) : T{
-    return value;
-    
+function add<T, U>(value1 : T, value2 : U){
+    console.log(typeof value1);
+    console.log(typeof value2);
 }
 
-const numberResult : number = longAndReturn<number>(44);
-console.log(numberResult);
+add("Rushikesh", 44);
+add(20, "Tekale");
+add(true, 44);
 
-const stringResult : string = longAndReturn<string>("Rushikesh");
-console.log(stringResult);
-
-const boolResult : boolean = longAndReturn<boolean>(true);
-console.log(boolResult);
 
 

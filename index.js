@@ -1,11 +1,9 @@
 "use strict";
 //Generics in TS
-function longAndReturn(value) {
-    return value;
+function add(value1, value2) {
+    console.log(typeof value1);
+    console.log(typeof value2);
 }
-const numberResult = longAndReturn(44);
-console.log(numberResult);
-const stringResult = longAndReturn("Rushikesh");
-console.log(stringResult);
-const boolResult = longAndReturn(true);
-console.log(boolResult);
+add("Rushikesh", 44);
+add(20, "Tekale");
+add(true, 44);
