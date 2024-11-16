@@ -1,9 +1,13 @@
 "use strict";
-//Generics in TS
-function add(value1, value2) {
-    console.log(typeof value1);
-    console.log(typeof value2);
-}
-add("Rushikesh", 44);
-add(20, "Tekale");
-add(true, 44);
+const person = {
+    name: "Rushikesh",
+    age: 23,
+    city: "Pune"
+};
+const person2 = {
+    name: "Rohan",
+    age: 21,
+    city: "Dharachiv"
+};
+console.log(person);
+console.log(person2);
