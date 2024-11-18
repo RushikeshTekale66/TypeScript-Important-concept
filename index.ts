@@ -4,7 +4,7 @@
 class Person{
      name : string;
      age : number;
-     hobbies : string[];
+     public hobbies : string[];
 
      //Constructor
     constructor(name : string, age:number, hobbies : string[]){
@@ -31,7 +31,7 @@ class Student extends Person{
 
 //Outside the class
 const person : Person = new Person("Rohan", 21, ["Mobile", "Enjoy"]);
-console.log(person.hobbies);
+console.log(person.hobbies); 
 
 
 
