@@ -1,10 +1,10 @@
-//Default = Access Anywhere
+//public : Access only in sub class & class
 
 //Parent Class
 class Person{
-     name : string;
+     protected name : string;
      age : number;
-     public hobbies : string[];
+      hobbies : string[];
 
      //Constructor
     constructor(name : string, age:number, hobbies : string[]){
@@ -23,19 +23,19 @@ class Student extends Person{
         this.gread = gread;
     }
 
-    display() :string {
-        return `I am ${this.name}, my age is ${this.age}, my hobbies are ${this.hobbies.join(", ")} & I am in gread ${this.gread}`;
+    display() {
+        console.log(this.name);
+        
     }
     
 }
 
 //Outside the class
 const person : Person = new Person("Rohan", 21, ["Mobile", "Enjoy"]);
-console.log(person.hobbies); 
 
 
 
 //Object of the class
 const student : Student = new Student("Rushi", 23, ["Coding", "Bikeriding"], 10);
-console.log(student.hobbies);
+
 
