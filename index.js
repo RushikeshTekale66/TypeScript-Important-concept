@@ -1,5 +1,5 @@
 "use strict";
-//public : Access only in sub class & class
+//public : Access only in class
 //Parent Class
 class Person {
     //Constructor
@@ -16,7 +16,6 @@ class Student extends Person {
         this.gread = gread;
     }
     display() {
-        console.log(this.name);
     }
 }
 //Outside the class

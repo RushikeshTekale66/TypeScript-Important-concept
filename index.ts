@@ -1,8 +1,8 @@
-//public : Access only in sub class & class
+//public : Access only in class
 
 //Parent Class
 class Person{
-     protected name : string;
+     private name : string;
      age : number;
       hobbies : string[];
 
@@ -24,7 +24,7 @@ class Student extends Person{
     }
 
     display() {
-        console.log(this.name);
+        
         
     }
     
