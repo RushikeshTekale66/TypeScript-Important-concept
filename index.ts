@@ -2,40 +2,37 @@
 
 //Parent Class
 class Person{
-     private name : string;
-     age : number;
+      name : string;
+      private _age : number | undefined;
       hobbies : string[];
 
      //Constructor
-    constructor(name : string, age:number, hobbies : string[]){
+    constructor(name : string, hobbies : string[]){
         this.name = name;
-        this.age = age;
         this.hobbies= hobbies;
     }
-}
 
-//Child Class
-class Student extends Person{
-    gread : number;
-
-    constructor (name : string, age:number, hobbies : string[], gread:number){
-        super(name = name, age = age, hobbies = hobbies);
-        this.gread = gread;
+    public set age(age : number){
+        if(age>60 || age<0){
+            throw new Error("You are retired");
+            
+        }
+        this._age = age;
     }
 
-    display() {
-        
-        
+    public get age():number{
+        if(this._age === undefined){
+            throw new Error("The age is undefined");
+        }
+        return this._age;
     }
-    
 }
 
-//Outside the class
-const person : Person = new Person("Rohan", 21, ["Mobile", "Enjoy"]);
+const person : Person = new Person("Rohan",["Mobile", "Enjoy"]);
 
+//set age
+person.age = 10;
 
-
-//Object of the class
-const student : Student = new Student("Rushi", 23, ["Coding", "Bikeriding"], 10);
-
+//get age
+console.log(person.age);
 
