@@ -1,20 +1,20 @@
-class BankAccount{
-    private _balance : number = 0;
+class Temperature{
+    private _celsius : number = 0;
 
-    public get balance() : number {
-        return this._balance;
-
-    } 
-
-    public set balance(newBalance : number ){
-        if(newBalance<0){
-            throw new Error("Invalid balance");
-        }
-        this._balance = newBalance;
+    public get celsius():number{
+        return this._celsius;
     }
-    
+
+    public set celsius( newCelsius : number){
+        this._celsius = newCelsius;
+    }
+
+    public get fahrenheit(): number{
+        return (this._celsius*9)/5+32;
+    }
 }
 
-const account = new BankAccount();
-account.balance = 100;
-console.log(account.balance);
+const temperature = new Temperature();
+
+temperature.celsius = 34;
+console.log(temperature.fahrenheit);

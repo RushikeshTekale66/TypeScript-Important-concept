@@ -1,18 +1,18 @@
 "use strict";
-class BankAccount {
+class Temperature {
     constructor() {
-        this._balance = 0;
+        this._celsius = 0;
     }
-    get balance() {
-        return this._balance;
+    get celsius() {
+        return this._celsius;
     }
-    set balance(newBalance) {
-        if (newBalance < 0) {
-            throw new Error("Invalid balance");
-        }
-        this._balance = newBalance;
+    set celsius(newCelsius) {
+        this._celsius = newCelsius;
+    }
+    get fahrenheit() {
+        return (this._celsius * 9) / 5 + 32;
     }
 }
-const account = new BankAccount();
-account.balance = 100;
-console.log(account.balance);
+const temperature = new Temperature();
+temperature.celsius = 34;
+console.log(temperature.fahrenheit);
