@@ -1,24 +1,21 @@
+//Creating class
+class Person{
+     name : string;
+     age : number;
+     hobbies : string[];
 
-
-//Intreface
-interface Person{
-    name : string,
-    age : number,
-    city : string
+     //Constructor
+    constructor(name : string, age:number, hobbies : string[]){
+        this.name = name;
+        this.age = age;
+        this.hobbies= hobbies;
+    }
 }
 
-const person : Person =  {
-    name : "Rushikesh",
-    age : 23,
-    city : "Pune"
-}
+//Object of the class
+const person1 : Person = new Person("Rushi", 23, ["Coding", "Bikeriding"]);
+const person2 : Person = new Person("Rohan", 21, ["mobile", "pubg"]);
 
-const person2 : Person = {
-    name : "Rohan",
-    age : 21,
-    city : "Dharachiv"
-}
-
-console.log(person);
+console.log(person1);
 console.log(person2);
 

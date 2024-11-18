@@ -1,13 +1,15 @@
 "use strict";
-const person = {
-    name: "Rushikesh",
-    age: 23,
-    city: "Pune"
-};
-const person2 = {
-    name: "Rohan",
-    age: 21,
-    city: "Dharachiv"
-};
-console.log(person);
+//Creating class
+class Person {
+    //Constructor
+    constructor(name, age, hobbies) {
+        this.name = name;
+        this.age = age;
+        this.hobbies = hobbies;
+    }
+}
+//Object of the class
+const person1 = new Person("Rushi", 23, ["Coding", "Bikeriding"]);
+const person2 = new Person("Rohan", 21, ["mobile", "pubg"]);
+console.log(person1);
 console.log(person2);
