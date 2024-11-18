@@ -1,38 +1,20 @@
-//public : Access only in class
+class BankAccount{
+    private _balance : number = 0;
 
-//Parent Class
-class Person{
-      name : string;
-      private _age : number | undefined;
-      hobbies : string[];
+    public get balance() : number {
+        return this._balance;
 
-     //Constructor
-    constructor(name : string, hobbies : string[]){
-        this.name = name;
-        this.hobbies= hobbies;
-    }
+    } 
 
-    public set age(age : number){
-        if(age>60 || age<0){
-            throw new Error("You are retired");
-            
+    public set balance(newBalance : number ){
+        if(newBalance<0){
+            throw new Error("Invalid balance");
         }
-        this._age = age;
+        this._balance = newBalance;
     }
-
-    public get age():number{
-        if(this._age === undefined){
-            throw new Error("The age is undefined");
-        }
-        return this._age;
-    }
+    
 }
 
-const person : Person = new Person("Rohan",["Mobile", "Enjoy"]);
-
-//set age
-person.age = 10;
-
-//get age
-console.log(person.age);
-
+const account = new BankAccount();
+account.balance = 100;
+console.log(account.balance);
