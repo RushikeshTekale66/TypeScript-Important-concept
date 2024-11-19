@@ -1,20 +1,21 @@
-class Temperature{
-    private _celsius : number = 0;
+class MathOperations{
+    //Static variable
+    public static PI : number = Math.PI;
 
-    public get celsius():number{
-        return this._celsius;
+    //Static Method
+    public static add(num1 : number, num2 : number):number{
+        return num1+num2;
     }
 
-    public set celsius( newCelsius : number){
-        this._celsius = newCelsius;
-    }
-
-    public get fahrenheit(): number{
-        return (this._celsius*9)/5+32;
+    public static sub(num1 : number, num2 : number):number{
+        return num1-num2;
     }
 }
 
-const temperature = new Temperature();
+//Static member we can access direclty without creating object of the class
 
-temperature.celsius = 34;
-console.log(temperature.fahrenheit);
+console.log(MathOperations.PI);
+console.log(MathOperations.add(10, 10));
+console.log(MathOperations.sub(20, 10));
+
+
