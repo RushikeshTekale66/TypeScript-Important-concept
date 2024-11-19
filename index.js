@@ -1,16 +1,24 @@
 "use strict";
-class MathOperations {
-    //Static Method
-    static add(num1, num2) {
-        return num1 + num2;
+class Shape {
+    constructor(color) {
+        this.color = color;
     }
-    static sub(num1, num2) {
-        return num1 - num2;
+    ;
+}
+class Circle extends Shape {
+    constructor(color, radius) {
+        super(color);
+        this.color = color;
+        this.radius = radius;
+        this.displayArea = () => {
+            console.log(`This is a ${this.color} circle with radius ${this.radius}`);
+        };
+    }
+    ;
+    calculateArea() {
+        return this.radius * this.radius * Math.PI;
     }
 }
-//Static variable
-MathOperations.PI = Math.PI;
-//Static member we can access direclty without creating object of the class
-console.log(MathOperations.PI);
-console.log(MathOperations.add(10, 10));
-console.log(MathOperations.sub(20, 10));
+const circle1 = new Circle("Red", 10);
+console.log("Area of circle is :", circle1.calculateArea());
+circle1.displayArea();

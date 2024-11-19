@@ -1,21 +1,26 @@
-class MathOperations{
-    //Static variable
-    public static PI : number = Math.PI;
+abstract class Shape {
+    constructor(protected color: string) { };
 
-    //Static Method
-    public static add(num1 : number, num2 : number):number{
-        return num1+num2;
-    }
-
-    public static sub(num1 : number, num2 : number):number{
-        return num1-num2;
-    }
+    abstract calculateArea(): number;
+    abstract displayArea: () => void;
 }
 
-//Static member we can access direclty without creating object of the class
+class Circle extends Shape {
+    constructor(protected color: string, protected radius: number) {
+        super(color);
+    };
 
-console.log(MathOperations.PI);
-console.log(MathOperations.add(10, 10));
-console.log(MathOperations.sub(20, 10));
+    public calculateArea(): number {
+        return this.radius * this.radius * Math.PI;
+    }
 
+    public displayArea = (): void => {
+        console.log(`This is a ${this.color} circle with radius ${this.radius}`);
+        
+    };
+}
 
+const circle1 = new Circle("Red", 10);
+console.log("Area of circle is :", circle1.calculateArea());
+
+circle1.displayArea();
