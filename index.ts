@@ -1,26 +1,28 @@
-abstract class Shape {
-    constructor(protected color: string) { };
-
-    abstract calculateArea(): number;
-    abstract displayArea: () => void;
+interface Stud1{
+    name : string,
+    age : number
 }
 
-class Circle extends Shape {
-    constructor(protected color: string, protected radius: number) {
-        super(color);
-    };
-
-    public calculateArea(): number {
-        return this.radius * this.radius * Math.PI;
-    }
-
-    public displayArea = (): void => {
-        console.log(`This is a ${this.color} circle with radius ${this.radius}`);
-        
-    };
+interface Stud2{
+    city:string,
+    state:string
 }
 
-const circle1 = new Circle("Red", 10);
-console.log("Area of circle is :", circle1.calculateArea());
+//Interface extends each other
+interface Data extends Stud1, Stud2{};
 
-circle1.displayArea();
+//Class implements interface
+class Biodata implements Data{
+    constructor(
+        public name : string,
+        public age : number,
+        public city : string,
+        public state : string
+    ){};
+}
+
+const data = new Biodata("Rushikesh", 23, "Pune", "Maharashtra");
+
+console.log(data);
+
+

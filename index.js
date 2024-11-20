@@ -1,24 +1,14 @@
 "use strict";
-class Shape {
-    constructor(color) {
-        this.color = color;
+;
+//Class implements interface
+class Biodata {
+    constructor(name, age, city, state) {
+        this.name = name;
+        this.age = age;
+        this.city = city;
+        this.state = state;
     }
     ;
 }
-class Circle extends Shape {
-    constructor(color, radius) {
-        super(color);
-        this.color = color;
-        this.radius = radius;
-        this.displayArea = () => {
-            console.log(`This is a ${this.color} circle with radius ${this.radius}`);
-        };
-    }
-    ;
-    calculateArea() {
-        return this.radius * this.radius * Math.PI;
-    }
-}
-const circle1 = new Circle("Red", 10);
-console.log("Area of circle is :", circle1.calculateArea());
-circle1.displayArea();
+const data = new Biodata("Rushikesh", 23, "Pune", "Maharashtra");
+console.log(data);
