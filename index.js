@@ -1,14 +1,12 @@
 "use strict";
-;
-//Class implements interface
-class Biodata {
-    constructor(name, age, city, state) {
-        this.name = name;
-        this.age = age;
-        this.city = city;
-        this.state = state;
+const favHobbies = (hobby) => {
+    if (typeof hobby == 'object') {
+        return hobby.map((value) => console.log(value));
     }
-    ;
-}
-const data = new Biodata("Rushikesh", 23, "Pune", "Maharashtra");
-console.log(data);
+    else {
+        console.log(hobby);
+    }
+};
+//Type narroying or Type of guards
+favHobbies("Coding");
+favHobbies(["Coding", "Bike Riding"]);
